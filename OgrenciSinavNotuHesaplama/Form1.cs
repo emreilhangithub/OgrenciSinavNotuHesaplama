@@ -38,5 +38,23 @@ namespace OgrenciSinavNotuHesaplama
                 " Ortalama = " + ortalama
                 );
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string urunadi;
+            urunadi = textBox6.Text;
+            double urunfiyati, kdv1, kdv8, kdv18;
+            urunfiyati = Convert.ToDouble(textBox7.Text);
+            kdv1 = urunfiyati +(urunfiyati * 0.01);
+            kdv8 = urunfiyati + (urunfiyati * 0.08);
+            kdv18 = urunfiyati + (urunfiyati * 0.18);
+            listBox2.Items.Add(
+                "Ürünün Adı = " + urunadi +
+                "Ürünün Fiyatı = " + urunfiyati+
+                "%1 Kdvli   = " + kdv1 +
+                "%8 Kdvli = " + kdv8 +
+                "%18 Kdvli = " + kdv18
+                );
+        }
     }
 }
