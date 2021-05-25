@@ -16,5 +16,27 @@ namespace OgrenciSinavNotuHesaplama
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string ad, soyad;
+            int s1, s2, proje;
+            double ortalama;
+            ad = textBox1.Text;
+            soyad = textBox2.Text;
+            s1 = Convert.ToInt16(textBox3.Text);
+            s2 = Convert.ToInt16(textBox4.Text);
+            proje = Convert.ToInt16(textBox5.Text);
+            ortalama = (s1 + s2 + proje) / 3;
+            listBox1.Items.Add
+                (
+                "Ad = " + ad +
+                " Soyad = " + soyad+
+                " Sınav 1 = " + s1 +
+                " Sınav 2 = " + s2 +
+                " Proje = " + proje +
+                " Ortalama = " + ortalama
+                );
+        }
     }
 }
